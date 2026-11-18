@@ -1,0 +1,865 @@
+/* ==========================================================================
+   KAKA BHAIYA BBQ - SMART TABLE ORDERING STYLESHEET (tables/table.css)
+   Aesthetic: 2026 Modern Dining, Light Theme, Charcoal Fire Accents
+   ========================================================================== */
+
+/* Page Background & Base */
+body.table-ordering-body {
+  background-color: var(--color-bg, #FFF8F0);
+  color: var(--color-charcoal, #110E0D);
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  padding-top: calc(var(--header-height, 68px) + 0.75rem);
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Content container clearance above footer */
+.table-ordering-container {
+  padding-bottom: 4.5rem;
+}
+
+/* 1. Table Hero Banner */
+.table-hero-banner {
+  background: linear-gradient(135deg, rgba(255, 84, 30, 0.08) 0%, rgba(155, 28, 28, 0.04) 100%);
+  border: 1px solid rgba(255, 84, 30, 0.18);
+  border-radius: 20px;
+  padding: 1.75rem 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(255, 84, 30, 0.06);
+}
+
+.table-hero-banner::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 84, 30, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.table-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #FF541E 0%, #D32F2F 100%);
+  color: #FFFFFF;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  padding: 0.45rem 1.25rem;
+  border-radius: 50rem;
+  box-shadow: 0 4px 14px rgba(255, 84, 30, 0.35);
+}
+
+.table-hero-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-charcoal, #110E0D);
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.table-hero-subtext {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* 2. Live Search & Filter Bar */
+.table-search-wrap {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.table-search-icon {
+  position: absolute;
+  left: 1.15rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9E9E9E;
+  font-size: 1.15rem;
+  pointer-events: none;
+}
+
+.table-search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.85rem;
+  font-size: 0.95rem;
+  border-radius: 50rem;
+  border: 1.5px solid #E0D9D4;
+  background-color: #FFFFFF;
+  color: var(--color-charcoal, #110E0D);
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.table-search-input:focus {
+  outline: none;
+  border-color: var(--color-fire, #FF541E);
+  box-shadow: 0 0 0 3px rgba(255, 84, 30, 0.15);
+}
+
+/* 3. Sticky Category Navigation Bar */
+.table-category-sticky {
+  position: sticky;
+  top: 72px;
+  z-index: 1020;
+  background: rgba(255, 248, 240, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.65rem 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.table-category-scroll {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 2px 4px;
+}
+
+.table-category-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.table-cat-pill {
+  white-space: nowrap;
+  background: #FFFFFF;
+  color: #555555;
+  border: 1.5px solid #E5DFDA;
+  border-radius: 50rem;
+  padding: 0.45rem 1.15rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.table-cat-pill:hover {
+  border-color: var(--color-fire, #FF541E);
+  color: var(--color-fire, #FF541E);
+  transform: translateY(-1px);
+}
+
+.table-cat-pill.active {
+  background: linear-gradient(135deg, #FF541E 0%, #D32F2F 100%);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(255, 84, 30, 0.3);
+}
+
+/* 4. Dish Cards */
+.table-dish-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.table-dish-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-color: rgba(255, 84, 30, 0.35);
+}
+
+.table-dish-thumb {
+  position: relative;
+  height: 185px;
+  overflow: hidden;
+  background: #F0EAE4;
+}
+
+.table-dish-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.table-dish-card:hover .table-dish-img {
+  transform: scale(1.05);
+}
+
+.table-dish-badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.table-badge-cat {
+  background: rgba(17, 14, 13, 0.85);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 50rem;
+  backdrop-filter: blur(4px);
+}
+
+.table-badge-coming-soon-tag {
+  background: rgba(30, 24, 22, 0.92);
+  color: #FFB39A;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50rem;
+  border: 1px solid rgba(255, 84, 30, 0.4);
+  backdrop-filter: blur(4px);
+}
+
+.table-badge-spice {
+  background: rgba(255, 84, 30, 0.95);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 50rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.table-dish-body {
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.table-dish-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-charcoal, #110E0D);
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.table-dish-desc {
+  font-size: 0.82rem;
+  color: #757575;
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* Quantity Option Chips */
+.table-dish-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.table-chip-btn {
+  background: #FFF8F5;
+  color: #4A3E3B;
+  border: 1.5px solid #F0DCD3;
+  border-radius: 50rem;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  line-height: 1;
+}
+
+.table-chip-btn:hover {
+  border-color: var(--color-fire, #FF541E);
+  color: var(--color-fire, #FF541E);
+  background: #FFF0EB;
+}
+
+.table-chip-btn.active {
+  background: linear-gradient(135deg, #FF541E 0%, #D32F2F 100%);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 2px 8px rgba(255, 84, 30, 0.35);
+}
+
+.table-dish-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px dashed #EDE6E1;
+  padding-top: 0.75rem;
+  margin-top: auto;
+}
+
+.table-dish-price {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--color-fire, #FF541E);
+}
+
+.table-dish-price small {
+  font-size: 0.75rem;
+  color: #888888;
+  font-weight: 600;
+}
+
+/* Add Button & Stepper inside card */
+.table-btn-add {
+  background: #FFF0EB;
+  color: var(--color-fire, #FF541E);
+  border: 1.5px solid rgba(255, 84, 30, 0.4);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  border-radius: 50rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.table-btn-add:hover {
+  background: var(--color-fire, #FF541E);
+  color: #FFFFFF;
+  border-color: var(--color-fire, #FF541E);
+  box-shadow: 0 4px 10px rgba(255, 84, 30, 0.3);
+}
+
+.table-stepper {
+  display: inline-flex;
+  align-items: center;
+  background: #FFF0EB;
+  border: 1.5px solid var(--color-fire, #FF541E);
+  border-radius: 50rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(255, 84, 30, 0.2);
+}
+
+.table-stepper-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-fire, #FF541E);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.table-stepper-btn:hover {
+  background: var(--color-fire, #FF541E);
+  color: #FFFFFF;
+}
+
+.table-stepper-qty {
+  min-width: 28px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--color-charcoal, #110E0D);
+}
+
+/* Coming Soon State (Non-purchasable dishes - Single Clean Element) */
+.table-dish-foot-coming-soon {
+  justify-content: center !important;
+  border-top: 1px dashed #EDE6E1;
+  padding-top: 0.65rem;
+  margin-top: auto;
+}
+
+.table-badge-coming-soon-single {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #F4EFEB;
+  color: #7A726C;
+  border: 1.5px solid #E2D9D1;
+  padding: 0.42rem 0.95rem;
+  border-radius: 50rem;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  cursor: not-allowed;
+  user-select: none;
+  opacity: 0.95;
+}
+
+/* 5. Mobile Floating Sticky Bottom Cart Bar */
+.table-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+  background: rgba(17, 14, 13, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.85rem 1rem calc(0.85rem + env(safe-area-inset-bottom));
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(110%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.table-bottom-bar.show {
+  transform: translateY(0);
+}
+
+.table-bottom-bar-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.table-bottom-bar-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #FF541E 0%, #D32F2F 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px rgba(255, 84, 30, 0.4);
+}
+
+.table-bottom-bar-count {
+  font-size: 0.8rem;
+  color: #BDBDBD;
+  font-weight: 600;
+}
+
+.table-bottom-bar-total {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.table-bottom-bar-btn {
+  background: linear-gradient(135deg, #FF541E 0%, #D32F2F 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50rem;
+  padding: 0.6rem 1.35rem;
+  font-weight: 800;
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 4px 14px rgba(255, 84, 30, 0.4);
+  transition: all 0.2s ease;
+}
+
+.table-bottom-bar-btn:hover {
+  transform: translateY(-2px);
+  color: #FFFFFF;
+  box-shadow: 0 6px 18px rgba(255, 84, 30, 0.55);
+}
+
+/* 6. Offcanvas Cart Drawer Styles */
+.table-cart-drawer {
+  width: 100%;
+  max-width: 460px;
+  background: #FFFDF9;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.table-cart-item {
+  background: #FFFFFF;
+  border: 1px solid #EFEAE5;
+  border-radius: 14px;
+  padding: 0.75rem;
+  margin-bottom: 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.table-cart-item:hover {
+  border-color: rgba(255, 84, 30, 0.3);
+}
+
+.table-cart-item-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #EEE;
+}
+
+.table-cart-item-info {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.table-cart-item-title {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-charcoal, #110E0D);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-cart-item-price {
+  font-size: 0.82rem;
+  color: var(--color-fire, #FF541E);
+  font-weight: 700;
+}
+
+.table-cart-stepper {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #DDD;
+  border-radius: 50rem;
+  background: #FAFAFA;
+}
+
+.table-cart-stepper button {
+  background: transparent;
+  border: none;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--color-fire, #FF541E);
+  cursor: pointer;
+}
+
+.table-cart-stepper span {
+  min-width: 22px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.table-cart-remove {
+  background: transparent;
+  border: none;
+  color: #BDBDBD;
+  font-size: 1.1rem;
+  padding: 4px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.table-cart-remove:hover {
+  color: #D32F2F;
+}
+
+.table-empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: #757575;
+}
+
+.table-empty-icon {
+  font-size: 3.5rem;
+  color: #E0D9D4;
+  margin-bottom: 0.75rem;
+}
+
+/* 7. Modal Confirmation Styling */
+.table-modal-header-hero {
+  background: linear-gradient(135deg, #110E0D 0%, #25201E 100%);
+  color: #FFFFFF;
+  border-top-left-radius: calc(1rem - 1px);
+  border-top-right-radius: calc(1rem - 1px);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.table-modal-badge {
+  background: linear-gradient(135deg, #FF541E, #D32F2F);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 50rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table-hero-title {
+    font-size: 1.6rem;
+  }
+  .table-hero-banner {
+    padding: 1.25rem 1rem;
+  }
+  .table-dish-thumb {
+    height: 165px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-hero-title {
+    font-size: 1.4rem;
+  }
+  .table-badge-pill {
+    font-size: 0.95rem;
+    padding: 0.35rem 1rem;
+  }
+}
+
+
+/* Extra Mobile & Tablet Responsiveness Enhancements */
+@media (max-width: 576px) {
+  .table-dish-card {
+    border-radius: 14px;
+  }
+  .table-dish-thumb {
+    height: 135px;
+  }
+  .table-dish-badges {
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    gap: 3px;
+    flex-wrap: wrap;
+  }
+  .table-badge-cat,
+  .table-badge-coming-soon-tag {
+    font-size: 0.64rem;
+    padding: 2px 7px;
+    max-width: 100%;
+  }
+  .table-badge-spice {
+    display: none; /* Hide secondary spice badge on narrow mobile to keep thumbnail clean */
+  }
+  .table-dish-body {
+    padding: 0.65rem 0.6rem;
+  }
+  .table-dish-title {
+    font-size: 0.88rem;
+    line-height: 1.25;
+    margin-bottom: 0.25rem;
+    min-height: 2.2em;
+  }
+  .table-dish-desc {
+    font-size: 0.72rem;
+    line-height: 1.35;
+    margin-bottom: 0.55rem;
+    word-break: break-word;
+    white-space: normal;
+  }
+  .table-dish-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-bottom: 0.55rem;
+  }
+  .table-chip-btn {
+    flex: 1 1 calc(50% - 0.25rem);
+    font-size: 0.70rem;
+    padding: 0.28rem 0.2rem;
+    min-height: 28px;
+    text-align: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+  .table-dish-foot {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+    padding-top: 0.55rem;
+    margin-top: auto;
+    border-top: 1px dashed #EDE6E1;
+  }
+  .table-dish-price {
+    font-size: 1.05rem;
+    text-align: left;
+    line-height: 1.2;
+  }
+  .table-dish-price small {
+    font-size: 0.68rem;
+  }
+  .table-dish-action {
+    width: 100%;
+  }
+  .table-btn-add {
+    width: 100%;
+    justify-content: center;
+    padding: 0.38rem 0.65rem;
+    font-size: 0.8rem;
+    min-height: 32px;
+  }
+  .table-stepper {
+    width: 100%;
+    justify-content: space-between;
+    min-height: 32px;
+  }
+  .table-stepper-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+  .table-stepper-qty {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  .table-badge-coming-soon-single {
+    font-size: 0.78rem;
+    padding: 0.38rem 0.65rem;
+    min-height: 32px;
+  }
+  .table-bottom-bar {
+    padding: 0.65rem 0.75rem calc(0.65rem + env(safe-area-inset-bottom));
+  }
+  .table-bottom-bar-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.05rem;
+  }
+  .table-bottom-bar-total {
+    font-size: 1.1rem;
+  }
+  .table-bottom-bar-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.82rem;
+  }
+  .table-cart-drawer {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVENESS ENHANCEMENTS FOR TABLE ORDERING
+   ========================================================================== */
+
+/* Elevate floating actions above sticky mobile bottom bar */
+body.table-ordering-body .floating-actions-wrap {
+  bottom: 85px !important;
+  z-index: 1035;
+}
+
+/* Category sticky header alignment */
+.table-category-sticky {
+  top: var(--header-height, 68px) !important;
+}
+
+/* Very small mobile screens (<= 400px) layout polish */
+@media (max-width: 400px) {
+  body.table-ordering-body {
+    padding-top: calc(var(--header-height, 68px) + 0.4rem);
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .table-hero-banner {
+    padding: 1rem 0.85rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .table-hero-title {
+    font-size: 1.3rem;
+  }
+  .table-badge-pill {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.85rem;
+  }
+  .table-dish-foot {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+  }
+  .table-dish-action {
+    width: 100%;
+  }
+  .table-btn-add {
+    width: 100%;
+    justify-content: center;
+    padding: 0.35rem 0.5rem;
+  }
+  .table-stepper {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .table-stepper-qty {
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+/* Navbar responsiveness for mobile on table pages */
+@media (max-width: 576px) {
+  .navbar-bbq .navbar-brand-bbq {
+    gap: 0.45rem;
+  }
+  .navbar-bbq .brand-emblem {
+    width: 36px;
+    height: 36px;
+  }
+  .navbar-bbq .brand-name {
+    font-size: 1.1rem;
+  }
+  .navbar-bbq .brand-tagline {
+    font-size: 0.65rem;
+  }
+  .btn-cart-nav.p-2 {
+    padding: 0.35rem 0.6rem !important;
+  }
+}
+
+/* Strict Zero Footer Bottom Gap on All Table Pages */
+html, body, body.table-ordering-body {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.footer-bbq {
+  margin-bottom: 0 !important;
+}
+
+.footer-bottom {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Kaka Bhaiya BBQ (Model Town D-Block Walay)",
+  "short_name": "Kaka Bhaiya",
+  "description": "Authentic Charcoal-Grilled Pakistani Barbecue with 56+ years heritage since 1970. Model Town D-Block Walay now at Hoo Chowk, Johar Town, Lahore.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0E0E0E",
+  "theme_color": "#FF541E",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/images/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/images/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

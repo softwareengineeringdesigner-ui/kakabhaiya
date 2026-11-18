@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Table 1 | Kaka Bhaiya BBQ - Smart Dine-In Order</title>
+  <meta content="Dine-in self-ordering for Table 1 at Kaka Bhaiya BBQ, 414-E Hoo Chowk, Johar Town, Lahore. Order charcoal-grilled seekh kabab, chicken malai boti, paratha rolls, and family deals directly to our kitchen via WhatsApp." name="description"/>
+  <meta content="Kaka Bhaiya BBQ, Table Ordering, Dine-in Order, Table 1, Johar Town BBQ, Hoo Chowk, Seekh Kabab, Paratha Rolls, Lahore BBQ" name="keywords"/>
+  
+  <!-- Open Graph -->
+  <meta content="restaurant" property="og:type"/>
+  <meta content="Table 1 | Kaka Bhaiya BBQ - Smart Dine-In Order" property="og:title"/>
+  <meta content="Dine-in self-ordering for Table 1 at Kaka Bhaiya BBQ, 414-E Hoo Chowk, Johar Town, Lahore. Order directly to our kitchen." property="og:description"/>
+  <meta content="https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&amp;q=80" property="og:image"/>
+  
+  <!-- Favicon -->
+  <link href="../images/logo.jpg" rel="icon" type="image/jpeg"/>
+  <link href="../images/logo.jpg" rel="apple-touch-icon"/>
+  
+  <!-- Google Fonts: Outfit (Display/Headings) & Plus Jakarta Sans (Body) -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  
+  <!-- Bootstrap 5 CDN & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  
+  <!-- Site Stylesheet & Table Stylesheet -->
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="table.css" rel="stylesheet"/>
+</head>
+<body class="table-ordering-body" data-table="1">
+
+  <!-- ========================================================================
+       PRELOADER
+       ======================================================================== -->
+  <div aria-hidden="true" id="preloader">
+    <div class="preloader-flame-wrap">
+      <div class="preloader-sparks"></div>
+      <img alt="Kaka Bhaiya BBQ Logo" class="preloader-logo-img" src="../images/logo.jpg"/>
+    </div>
+    <div class="preloader-text">Kaka Bhaiya BBQ</div>
+    <div class="preloader-tagline">Table 1 • Smart Dine-In Ordering</div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 1: NAVBAR (Identical to main site, responsive with table cart)
+       ======================================================================== -->
+  <header>
+    <nav aria-label="Main Navigation" class="navbar navbar-expand-lg navbar-bbq">
+      <div class="container">
+        <!-- Brand Logo -->
+        <a class="navbar-brand navbar-brand-bbq" href="../index.html">
+          <div class="brand-emblem">
+            <img alt="Kaka Bhaiya BBQ Logo" class="brand-logo-img" src="../images/logo.jpg"/>
+          </div>
+          <div>
+            <div class="brand-name">KAKA <span>BHAIYA</span></div>
+            <span class="brand-tagline">MODEL TOWN D-BLOCK WALAY</span>
+          </div>
+        </a>
+
+        <!-- Mobile Action Buttons & Toggler (Instant Cart + Hamburger) -->
+        <div class="d-flex align-items-center gap-2 d-lg-none navbar-actions-mobile">
+          <button aria-label="View Table Order" class="btn btn-cart-nav position-relative p-2" data-bs-target="#tableCartDrawer" data-bs-toggle="offcanvas" title="View Table Order" type="button">
+            <i class="bi bi-cart3 text-fire fs-5"></i>
+            <span class="cart-badge badge-count" style="display: none;">0</span>
+          </button>
+          <button aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-bbq" data-bs-target="#navbarContent" data-bs-toggle="collapse" type="button">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link nav-link-bbq" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-bbq" href="../menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-bbq" href="../about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-bbq" href="../gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-bbq" href="../reviews.html">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-bbq" href="../reservation.html">Reservation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-bbq" href="../contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Desktop Actions -->
+          <div class="d-none d-lg-flex align-items-center gap-2">
+            <button aria-label="View Table Order" class="btn btn-cart-nav position-relative" data-bs-target="#tableCartDrawer" data-bs-toggle="offcanvas" title="View Table Order" type="button">
+              <i class="bi bi-cart3 text-fire fs-5"></i>
+              <span class="cart-nav-label">Table Cart</span>
+              <span class="cart-badge badge-count" style="display: none;">0</span>
+            </button>
+            <a class="btn btn-primary-bbq" href="../order.html">
+              <i class="bi bi-lightning-charge-fill"></i> Order Online
+            </a>
+          </div>
+
+          <!-- Mobile Menu Action CTAs -->
+          <div class="nav-actions-mobile d-lg-none mt-3 pt-3 border-top border-secondary-subtle">
+            <button class="btn btn-cart-nav w-100 justify-content-center py-2 mb-2 d-flex align-items-center gap-2" data-bs-target="#tableCartDrawer" data-bs-toggle="offcanvas" type="button">
+              <i class="bi bi-cart3 text-fire fs-5"></i>
+              <span>View Table Cart (<strong class="cart-badge-count">0</strong> items)</span>
+            </button>
+            <a class="btn btn-primary-bbq w-100 justify-content-center py-2 mb-2" href="../order.html">
+              <i class="bi bi-lightning-charge-fill"></i> Order Online
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT: SMART TABLE ORDERING
+       ======================================================================== -->
+  <main class="container py-3 py-md-4">
+    <!-- 1. Table Hero Banner -->
+    <section class="table-hero-banner">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <div>
+          <div class="table-badge-pill">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Table No. 1</span>
+          </div>
+          <h1 class="table-hero-title">Dine-In Self-Ordering</h1>
+          <p class="table-hero-subtext">
+            Welcome to Kaka Bhaiya BBQ! Select your favorite charcoal delicacies below.
+            Your order will be sent directly to our kitchen staff with <strong>Table No. 1</strong>.
+          </p>
+        </div>
+        <div class="d-none d-sm-flex align-items-center gap-2 bg-white px-3 py-2 rounded-pill border shadow-sm">
+          <i class="bi bi-clock-history text-fire"></i>
+          <span class="small fw-bold">Live Kitchen Dispatch</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Live Search & Filter Bar -->
+    <section class="table-search-wrap">
+      <i class="bi bi-search table-search-icon"></i>
+      <input type="text" id="table-search-input" class="table-search-input" placeholder="Search kabab, tikka, boti, roll, naan, drinks..." autocomplete="off">
+    </section>
+
+    <!-- 3. Sticky Category Navigation Bar -->
+    <nav class="table-category-sticky" aria-label="Menu Categories">
+      <div class="table-category-scroll" id="table-category-scroll">
+        <!-- Rendered dynamically by table.js -->
+      </div>
+    </nav>
+
+    <!-- 4. Menu Items Grid -->
+    <section aria-label="Menu Items">
+      <div class="row g-3 g-md-4" id="table-dishes-grid">
+        <!-- Rendered dynamically by table.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FLOATING STICKY BOTTOM BAR (Mobile)
+       ======================================================================== -->
+  <div class="table-bottom-bar" id="table-bottom-bar">
+    <div class="table-bottom-bar-info" data-bs-toggle="offcanvas" data-bs-target="#tableCartDrawer" role="button">
+      <div class="table-bottom-bar-icon">
+        <i class="bi bi-bag-check-fill"></i>
+      </div>
+      <div>
+        <div class="table-bottom-bar-count" id="table-bottom-count">0 items</div>
+        <div class="table-bottom-bar-total" id="table-bottom-total">Rs. 0</div>
+      </div>
+    </div>
+    <button class="table-bottom-bar-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#tableCartDrawer">
+      <span>View Order</span>
+      <i class="bi bi-arrow-right"></i>
+    </button>
+  </div>
+
+  <!-- ========================================================================
+       OFFCANVAS TABLE CART DRAWER
+       ======================================================================== -->
+  <div class="offcanvas offcanvas-end table-cart-drawer" tabindex="-1" id="tableCartDrawer" aria-labelledby="tableCartDrawerLabel">
+    <div class="offcanvas-header border-bottom">
+      <div>
+        <h5 class="offcanvas-title fw-bold d-flex align-items-center gap-2" id="tableCartDrawerLabel">
+          <i class="bi bi-receipt text-fire"></i> Table 1 Order
+        </h5>
+        <div class="small text-muted" id="table-cart-header-count">0 items</div>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between p-3">
+      <div>
+        <!-- Selected items list -->
+        <div id="table-cart-items">
+          <!-- Populated by table.js -->
+        </div>
+      </div>
+
+      <!-- Order Summary & Checkout Form -->
+      <div class="border-top pt-3 mt-3">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="fw-bold text-secondary">Grand Total:</span>
+          <span class="fs-4 fw-extrabold text-fire" id="table-cart-total-price" style="font-family: var(--font-heading);">Rs. 0</span>
+        </div>
+
+        <!-- Form: Only Customer Name & Special Instructions -->
+        <div class="mb-3">
+          <label for="table-customer-name" class="form-label small fw-bold mb-1">
+            Your Name <span class="text-danger">*</span>
+          </label>
+          <input type="text" id="table-customer-name" class="form-control" placeholder="Enter your full name" required autocomplete="name">
+        </div>
+
+        <div class="mb-3">
+          <label for="table-special-instructions" class="form-label small fw-bold mb-1">
+            Special Instructions <span class="text-muted fw-normal">(Optional)</span>
+          </label>
+          <textarea id="table-special-instructions" class="form-control" rows="2" placeholder="e.g. Kam mirch, extra salad, extra chutney, well done..."></textarea>
+        </div>
+
+        <div id="table-order-alert" class="alert d-none mb-3" role="alert"></div>
+
+        <button type="button" class="btn btn-primary-bbq w-100 py-3 fw-bold d-flex align-items-center justify-content-center gap-2" id="btn-confirm-table-order">
+          <i class="bi bi-whatsapp fs-5"></i>
+          <span>Confirm Order &amp; Send to Kitchen</span>
+        </button>
+        <p class="text-center text-muted small mt-2 mb-0" style="font-size: 0.78rem;">
+          <i class="bi bi-shield-check text-success me-1"></i> Order is routed directly to Kaka Bhaiya BBQ kitchen staff
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       ORDER CONFIRMATION MODAL
+       ======================================================================== -->
+  <div class="modal fade" id="tableOrderSuccessModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+        <div class="table-modal-header-hero">
+          <div class="table-modal-badge">
+            <i class="bi bi-check2-circle me-1"></i> Order Dispatched
+          </div>
+          <h3 class="fw-bold mb-1 text-white">Thank You!</h3>
+          <p class="text-white-50 small mb-0">Your order has been submitted for Table No. <span id="modal-table-number">1</span></p>
+        </div>
+        <div class="modal-body p-4 text-center">
+          <div class="mb-3">
+            <div class="text-muted small">Guest Name:</div>
+            <div class="fw-bold fs-5 text-dark" id="modal-customer-name">-</div>
+          </div>
+          <div class="mb-4">
+            <div class="text-muted small">Order Total:</div>
+            <div class="fw-bold fs-4 text-fire" id="modal-order-total">Rs. 0</div>
+          </div>
+          <p class="small text-muted mb-4">
+            If WhatsApp did not open automatically, please tap the button below to send your order details straight to our kitchen staff.
+          </p>
+          <div class="d-grid gap-2">
+            <a id="btn-modal-open-wa" href="#" target="_blank" class="btn btn-success py-2 fw-bold d-flex align-items-center justify-content-center gap-2">
+              <i class="bi bi-whatsapp fs-5"></i> Open WhatsApp Kitchen Chat
+            </a>
+            <button type="button" class="btn btn-outline-secondary py-2" data-bs-dismiss="modal">
+              Order More Items
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER (Identical to main site with official classes & responsive layout)
+       ======================================================================== -->
+  <footer class="footer-bbq">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <!-- Col 1: Brand & Heritage -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <a class="navbar-brand navbar-brand-bbq" href="../index.html">
+              <div class="brand-emblem">
+                <img alt="Kaka Bhaiya BBQ Logo" class="brand-logo-img" src="../images/logo.jpg"/>
+              </div>
+              <div>
+                <div class="brand-name text-white">KAKA <span style="color: var(--color-fire);">BHAIYA</span></div>
+                <span class="brand-tagline" style="color: #FFB300; font-weight: 700;">MODEL TOWN D-BLOCK WALAY • Since 1970</span>
+              </div>
+            </a>
+          </div>
+          <p class="footer-about-text">
+            Carrying forward the legendary recipes and charcoal grilling tradition of <strong>Bhaiya BBQ (Model Town D-Block Walay) since 1970</strong>. Authentic skewered kababs, smoking hot karahis, and genuine Lahori hospitality at our exclusive Johar Town destination.
+          </p>
+          <div class="footer-social-row">
+            <a aria-label="Facebook" class="footer-social-link" href="https://facebook.com" rel="noopener" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a aria-label="Instagram" class="footer-social-link" href="https://www.instagram.com/kakabhaiyaresturantb.q/" rel="noopener" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a aria-label="TikTok" class="footer-social-link" href="https://www.tiktok.com/@kakabhaiyarestuarant" rel="noopener" target="_blank"><i class="bi bi-tiktok"></i></a>
+            <a href="https://www.foodpanda.pk/restaurant/r2pi/kaka-bhaiya-bar-b-q?srsltid=AYCX9vJ8TWc0L8LYB6IXUQjSeIZvWvsswnzelODpGlIIwmMnIBYlUg5S" target="_blank" rel="noopener noreferrer" class="footer-social-link foodpanda-link" aria-label="Order on Foodpanda" title="Order on Foodpanda"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="4.5" cy="5.5" r="3"/><circle cx="19.5" cy="5.5" r="3"/><path d="M12 4C6.5 4 2.5 8 2.5 13.5c0 2.5 1 4.7 2.6 6.3C7 21.6 9.4 22.5 12 22.5s5-.9 6.9-2.7c1.6-1.6 2.6-3.8 2.6-6.3C21.5 8 17.5 4 12 4zm-4 6.5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm8 0c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm-4 7.5c-1.8 0-3.2-1-3.6-2.2h7.2c-.4 1.2-1.8 2.2-3.6 2.2z"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="../index.html"><i class="bi bi-chevron-right text-danger"></i> Home</a></li>
+            <li><a href="../menu.html"><i class="bi bi-chevron-right text-danger"></i> Full Menu</a></li>
+            <li><a href="../about.html"><i class="bi bi-chevron-right text-danger"></i> Brand Story</a></li>
+            <li><a href="../gallery.html"><i class="bi bi-chevron-right text-danger"></i> Photo Gallery</a></li>
+            <li><a href="../reviews.html"><i class="bi bi-chevron-right text-danger"></i> Diner Reviews</a></li>
+            <li><a href="../reservation.html"><i class="bi bi-chevron-right text-danger"></i> Table Booking</a></li>
+            <li><a href="../contact.html"><i class="bi bi-chevron-right text-danger"></i> Contact Us</a></li>
+            <li><a href="../tables.html"><i class="bi bi-chevron-right text-danger"></i> Table Ordering</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Opening Hours -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Opening Hours</h4>
+          <div class="footer-hours-list">
+            <div class="footer-hours-item">
+              <span class="hours-day">Monday – Sunday:</span>
+              <span class="hours-time">05:00 PM – 02:00 AM</span>
+            </div>
+            <div class="footer-hours-item">
+              <span class="hours-day">Home Delivery:</span>
+              <span class="hours-time text-warning fw-bold">Fresh • Fast • Hygienic</span>
+            </div>
+            <div class="mt-3 p-2 rounded-3" style="background: rgba(255, 179, 0, 0.12); border: 1px solid rgba(255, 179, 0, 0.3); color: #FFD54F; font-size: 0.88rem;">
+              <i class="bi bi-clock-history me-1"></i> Open 7 Days: 5:00 PM to 2:00 AM
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 4: Exclusive Sole Location & Direct Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Visit &amp; Contact</h4>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <strong style="color: #FFB300;">Sole Restaurant Branch:</strong><br/>
+              <a class="text-white-50 text-decoration-none" href="https://www.google.com/maps/place/Kaka+Bhaiya+kabab+and+B.b.q+Shop+(+Model+town+walay)/@31.4691106,74.295165,17z/data=!3m1!4b1!4m6!3m5!1s0x391903979d7d3465:0x6f3c1e69575def49!8m2!3d31.4691106!4d74.295165!16s%2Fg%2F11w2_3z8_k" rel="noopener" target="_blank" title="Open Google Maps">414-E, Hoo Chowk, Johar Town, Lahore, Pakistan <i class="bi bi-box-arrow-up-right small ms-1 text-warning"></i></a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>
+              <strong>Owner Direct Call:</strong><br/>
+              <a href="tel:+923228019941">0322 8019941</a> <span class="text-secondary">/</span> <a href="tel:+923014064779">0301 4064779</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-whatsapp"></i>
+            <div>
+              <strong>Instant WhatsApp:</strong><br/>
+              <a class="text-white-50 text-decoration-none" href="https://wa.me/923228019941?text=Hello%20Kaka%20Bhaiya%20BBQ!%20I%20am%20at%20Table%201%20and%20need%20assistance." rel="noopener" target="_blank">Chat on WhatsApp <i class="bi bi-box-arrow-up-right small text-warning ms-1"></i></a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-bag-check-fill" style="color: #D70F64;"></i>
+            <div>
+              <strong>Foodpanda Delivery:</strong><br/>
+              <a class="text-white-50 text-decoration-none" href="https://www.foodpanda.pk/restaurant/r2pi/kaka-bhaiya-bar-b-q?srsltid=AYCX9vJ8TWc0L8LYB6IXUQjSeIZvWvsswnzelODpGlIIwmMnIBYlUg5S" rel="noopener noreferrer" target="_blank">Order on foodpanda (4.8 ★) <i class="bi bi-box-arrow-up-right small text-warning ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kaka's Life Parent Corporate Card -->
+      <div class="footer-corporate-card mt-4">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-7">
+            <div class="kakas-umbrella-title">
+              <span>Main Brand: <strong>Kaka's Life</strong></span>
+              <span class="badge-parent">Parent Brand</span>
+            </div>
+            <p class="kakas-umbrella-desc">
+              <strong>Kaka's Life</strong> is the main parent brand, under which <strong>Kaka Bhaiya BBQ</strong> (Food &amp; Dining) and <strong>Kaka's Fragrance</strong> (Luxury Perfumes) operate.
+            </p>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <div class="d-flex flex-column align-items-lg-end gap-2">
+              <div class="text-white small fw-bold text-uppercase" style="letter-spacing: 0.08em; color: #FFB300 !important;">Our Group Categories:</div>
+              <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+                <span class="kakas-brand-item active-brand"><i class="bi bi-fire"></i> Kaka Bhaiya BBQ (Food)</span>
+                <span class="kakas-brand-item"><i class="bi bi-droplet-half"></i> Kaka's Fragrance (Perfumes)</span>
+              </div>
+              <div class="mt-2">
+                <a class="btn-kakas-link" href="https://kakaslife.vercel.app/" rel="noopener" target="_blank">
+                  <span>Visit Kaka's Life Official</span>
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>
+          © 2026 <strong>Kaka Bhaiya BBQ</strong> • An Enterprise of <strong>Kaka's Life</strong> (CEO: Hafiz Muhammad Mubeen). All Rights Reserved.
+        </div>
+        <div class="d-flex gap-3">
+          <a href="../about.html">Since 1970 Heritage</a>
+          <span class="text-secondary">•</span>
+          <a href="../contact.html">Hoo Chowk, Johar Town</a>
+          <span class="text-secondary">•</span>
+          <span class="text-white"><i class="bi bi-shield-check text-success"></i> 100% Halal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       FLOATING ACTIONS (WhatsApp & Back to Top)
+       ======================================================================== -->
+  <div aria-label="Quick Actions" class="floating-actions-wrap">
+    <button aria-label="Back to top" class="btn-back-top" id="back-to-top-btn" title="Back to Top"><i class="bi bi-arrow-up"></i></button>
+    <a aria-label="Direct Kitchen WhatsApp" class="btn-whatsapp-float" href="https://wa.me/923228019941?text=Hello%20Kaka%20Bhaiya%20BBQ!%20I%20am%20at%20Table%201%20and%20would%20like%20to%20order." rel="noopener" target="_blank" title="WhatsApp Kitchen"><i class="bi bi-whatsapp"></i></a>
+  </div>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Shared Menu Data -->
+  <script src="menu-data.js"></script>
+  <!-- Table Ordering Logic -->
+  <script src="table.js"></script>
+</body>
+</html>

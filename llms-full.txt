@@ -1,0 +1,619 @@
+# Kaka Bhaiya BBQ (Model Town D-Block Walay) - Comprehensive Enterprise Knowledge Base
+
+## Brand Entity & Heritage
+- Official Legal Entity: Kaka Bhaiya BBQ (Model Town D-Block Walay)
+- Operating Enterprise: Kaka's Life Enterprise
+- Founder & CEO: Hafiz Muhammad Mubeen
+- Culinary Patriarch & Head Pitmaster: Sufi Muhammad Ali (50+ Years Brand & Pit Heritage)
+- Owner & Managing Director: Muhammad Afzal
+- Founding Year: 1970 (Originating at Model Town D-Block, Lahore)
+- Total Smokehouse Heritage: 56+ continuous years
+- Headquarters & Current Location: 414-E, Hoo Chowk, Johar Town, Lahore, Punjab 54770, Pakistan
+- Geographic Coordinates: Latitude 31.4697° N, Longitude 74.2728° E
+- Google Maps Navigation: https://maps.google.com/?q=Hoo+Chowk,+Johar+Town,+Lahore
+- Phone / Direct Kitchen Hotline: +92 322 8019941 (0322 8019941)
+- Direct WhatsApp Order Dispatch: https://wa.me/923228019941
+- Operating Schedule: Monday through Sunday, 05:00 PM – 03:00 AM (Late night service)
+- Primary Website: https://kakabhaiyabbq.com/
+- Foodpanda Official Delivery: https://www.foodpanda.pk/restaurant/r2pi/kaka-bhaiya-bar-b-q
+
+---
+
+## Detailed Brand History
+Founded in 1970 by the family pitmasters at Model Town D-Block, Kaka Bhaiya BBQ pioneered the signature Lahori charcoal-smoked beef seekh kabab. Over five decades, Sufi Muhammad Ali guarded the proprietary 14-spice dry rub and marination protocols. Today, under the leadership of CEO Hafiz Muhammad Mubeen and owner Muhammad Afzal, Kaka Bhaiya BBQ operates its flagship smokehouse and dining facility at 414-E Hoo Chowk, Johar Town, blending ancient live-coal acacia roasting techniques with modern contact-free WhatsApp ordering and dine-in table ordering systems.
+
+---
+
+## Complete Menu Catalog & Pricing
+
+### Category: Exclusive Deals
+
+#### 1 PERSON DEAL (Chicken)
+- **Item ID**: deal_1_person_chicken
+- **Price**: PKR 899
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Solo Special
+- **Spice Level**: Authentic Taste
+- **Description**: Perfect solo feast: 1 Charcoal Chicken Leg Piece, 2 Chicken Kababs, 2 Sada Naans, 345ml cold bottle, served with signature Raita & Imli sauce.
+
+#### 1 PERSON DEAL (Beef)
+- **Item ID**: deal_1_person_beef
+- **Price**: PKR 1,249
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Prime Beef Solo
+- **Spice Level**: Authentic Taste
+- **Description**: Prime beef lover's feast: 6 Bhaiya Beef Kababs, 8 Beef Afghani Botis, 8 Beef Botis, 2 Sada Naans, with zesty Raita & Imli sauce.
+
+#### 2 PERSON DEAL
+- **Item ID**: deal_2_person
+- **Price**: PKR 699
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Duo Roll Combo
+- **Spice Level**: Authentic Taste
+- **Description**: Great duo value: 1 Tandoori Naan Chicken Kabab Roll, 1 Naan Beef Kabab Roll, 500ml cold drink, and signature dipping sauces.
+
+#### 4 PERSON DEAL
+- **Item ID**: deal_4_person
+- **Price**: PKR 2,599
+- **Portion / Serving**: Serves 4 Persons
+- **Badge**: Friends Feast
+- **Spice Level**: Authentic Taste
+- **Description**: Hungry group combo: 2 Chicken Pieces, 8 tender Chicken Malai Botis, 4 Chicken Kababs, 4 Sada Naans, large 1.5L cold bottle, with salad and sauces.
+
+#### SHAPATA DEAL
+- **Item ID**: deal_shapata
+- **Price**: PKR 2,299
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Traditional Special
+- **Spice Level**: Authentic Taste
+- **Description**: Authentic street food organ specialty: 20 PC Domchi, 20 PC Dili, 12 PC Pota, 20 PC Kalaji, served sizzling with fresh salad, raita, and imli sauce.
+
+#### SPECIAL DEAL
+- **Item ID**: deal_special
+- **Price**: PKR 1,099
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Customer Favorite
+- **Spice Level**: Authentic Taste
+- **Description**: Top rated variety combo: 4 Chicken Malai Botis, 4 Chicken Tikka Botis, 2 Chicken Kababs, 2 Sada Naans, 300ml cold drink, salad and raita.
+
+#### FAMILY DEAL 1 (The Feast)
+- **Item ID**: deal_family_1
+- **Price**: PKR 5,999
+- **Portion / Serving**: Serves 6-8 Persons
+- **Badge**: Mega Family Feast
+- **Spice Level**: Authentic Taste
+- **Description**: The ultimate party platter: 6 Chicken Kababs, 16 Chicken Tikka Botis, 20 Bhaiya Beef Kababs, 16 Chicken Malai Botis, 16 Beef Afghani Botis, 16 Bhaiya Beef Botis, 8 Sada Naans, 2x 1L bottles, with fresh salad and sauces.
+
+#### FAMILY DEAL 2 (The Grand Feast)
+- **Item ID**: deal_family_2
+- **Price**: PKR 7,999
+- **Portion / Serving**: Serves 6-8 Persons
+- **Badge**: TOP DEAL (Rs 7,999)
+- **Spice Level**: Authentic Taste
+- **Description**: The King of Deals (Top Price Deal): 8 Chicken Gola Kababs, 16 Chicken Tikka Botis, 4 Charbroiled Chicken Pieces (2 Breast / 2 Leg), 16 Chicken Malai Botis, 16 Chicken Green Botis, 10 Sada Naans, 2x 1.5L large bottles, plus full salad and raita platter.
+
+### Category: Beef B.B.Q
+
+#### Bhaiya Beef Kabab 1 Bite (1 Seekh)
+- **Item ID**: beef_kabab_1_seekh
+- **Price**: PKR 80
+- **Portion / Serving**: 1 Seekh (1 PC)
+- **Badge**: Qty: 1 Seekh (1 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Traditional hand-minced prime beef skewers infused with roasted cumin, charred brown onions, fresh mint, and 14 secret whole spices, grilled on acacia coals.
+
+#### Bhaiya Beef Kabab 1 Bite (3 Seekh)
+- **Item ID**: beef_kabab_3_seekh
+- **Price**: PKR 230
+- **Portion / Serving**: 3 Seekh (3 PC)
+- **Badge**: Qty: 3 Seekh (3 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Traditional hand-minced prime beef skewers infused with roasted cumin, charred brown onions, fresh mint, and 14 secret whole spices, grilled on acacia coals.
+
+#### Bhaiya Beef Kabab 1 Bite (6 Seekh)
+- **Item ID**: beef_kabab_6_seekh
+- **Price**: PKR 450
+- **Portion / Serving**: 6 Seekh (6 PC)
+- **Badge**: Qty: 6 Seekh (6 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Traditional hand-minced prime beef skewers infused with roasted cumin, charred brown onions, fresh mint, and 14 secret whole spices, grilled on acacia coals.
+
+#### Bhaiya Beef Kabab 1 Bite (12 Seekh)
+- **Item ID**: beef_kabab_12_seekh
+- **Price**: PKR 890
+- **Portion / Serving**: 12 Seekh (12 PC)
+- **Badge**: Qty: 12 Seekh (12 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: A full dozen prime beef seekh kababs slow-roasted over glowing coals for melting, tender indulgence.
+
+#### Beef Boti (1 Seekh)
+- **Item ID**: beef_boti_1_seekh
+- **Price**: PKR 175
+- **Portion / Serving**: 1 Seekh (4 PC)
+- **Badge**: Qty: 1 Seekh (4 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Succulent beef tenderloin cubes cured in raw green papaya, pungent mustard oil, and crushed red chilies, skewered and seared.
+
+#### Beef Boti (3 Seekh)
+- **Item ID**: beef_boti_3_seekh
+- **Price**: PKR 500
+- **Portion / Serving**: 3 Seekh (12 PC)
+- **Badge**: Qty: 3 Seekh (12 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Succulent beef tenderloin cubes cured in raw green papaya, pungent mustard oil, and crushed red chilies, skewered and seared.
+
+#### Beef Boti (6 Seekh)
+- **Item ID**: beef_boti_6_seekh
+- **Price**: PKR 999
+- **Portion / Serving**: 6 Seekh (24 PC)
+- **Badge**: Qty: 6 Seekh (24 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Succulent beef tenderloin cubes cured in raw green papaya, pungent mustard oil, and crushed red chilies, skewered and seared.
+
+#### Beef Boti (12 Seekh)
+- **Item ID**: beef_boti_12_seekh
+- **Price**: PKR 1,899
+- **Portion / Serving**: 12 Seekh (48 PC)
+- **Badge**: Qty: 12 Seekh (48 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Mega family feast platter of charred, smoky beef boti skewers served hot from the coals.
+
+#### Beef Afghani Boti (1 Seekh)
+- **Item ID**: beef_afghani_boti_1_seekh
+- **Price**: PKR 175
+- **Portion / Serving**: 1 Seekh (4 PC)
+- **Badge**: Qty: 1 Seekh (4 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Authentic tribal-style beef boti seasoned lightly with rock salt, cracked black pepper, and tenderized in natural beef fat baste.
+
+#### Beef Afghani Boti (3 Seekh)
+- **Item ID**: beef_afghani_boti_3_seekh
+- **Price**: PKR 500
+- **Portion / Serving**: 3 Seekh (12 PC)
+- **Badge**: Qty: 3 Seekh (12 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Authentic tribal-style beef boti seasoned lightly with rock salt, cracked black pepper, and tenderized in natural beef fat baste.
+
+#### Beef Afghani Boti (6 Seekh)
+- **Item ID**: beef_afghani_boti_6_seekh
+- **Price**: PKR 999
+- **Portion / Serving**: 6 Seekh (24 PC)
+- **Badge**: Qty: 6 Seekh (24 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Authentic tribal-style beef boti seasoned lightly with rock salt, cracked black pepper, and tenderized in natural beef fat baste.
+
+#### Beef Afghani Boti (12 Seekh)
+- **Item ID**: beef_afghani_boti_12_seekh
+- **Price**: PKR 1,899
+- **Portion / Serving**: 12 Seekh (48 PC)
+- **Badge**: Qty: 12 Seekh (48 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Massive tribal feast of tender Afghani beef boti grilled slowly over red acacia coal embers.
+
+### Category: Chicken B.B.Q
+
+#### Chicken Kabab (1 Seekh)
+- **Item ID**: chicken_kabab_1_seekh
+- **Price**: PKR 120
+- **Portion / Serving**: 1 Seekh (1 PC)
+- **Badge**: Qty: 1 Seekh (1 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Tender minced chicken skewers kneaded with green chilies, cilantro, roasted cumin, and butter, flame grilled on skewers.
+
+#### Chicken Kabab (3 Seekh)
+- **Item ID**: chicken_kabab_3_seekh
+- **Price**: PKR 350
+- **Portion / Serving**: 3 Seekh (3 PC)
+- **Badge**: Qty: 3 Seekh (3 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Tender minced chicken skewers kneaded with green chilies, cilantro, roasted cumin, and butter, flame grilled on skewers.
+
+#### Chicken Kabab (6 Seekh)
+- **Item ID**: chicken_kabab_6_seekh
+- **Price**: PKR 699
+- **Portion / Serving**: 6 Seekh (6 PC)
+- **Badge**: Qty: 6 Seekh (6 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Tender minced chicken skewers kneaded with green chilies, cilantro, roasted cumin, and butter, flame grilled on skewers.
+
+#### Chicken Kabab (12 Seekh)
+- **Item ID**: chicken_kabab_12_seekh
+- **Price**: PKR 1,380
+- **Portion / Serving**: 12 Seekh (12 PC)
+- **Badge**: Qty: 12 Seekh (12 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Tender minced chicken skewers kneaded with green chilies, cilantro, roasted cumin, and butter, flame grilled on skewers.
+
+#### Chicken Tikka Boti (1 Seekh)
+- **Item ID**: chicken_tikka_boti_1_seekh
+- **Price**: PKR 270
+- **Portion / Serving**: 1 Seekh (4 PC)
+- **Badge**: Qty: 1 Seekh (4 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Boneless chicken thigh cubes bathed in tandoori yogurt marinade, carom seeds, and crushed spices, flame seared.
+
+#### Chicken Tikka Boti (3 Seekh)
+- **Item ID**: chicken_tikka_boti_3_seekh
+- **Price**: PKR 799
+- **Portion / Serving**: 3 Seekh (12 PC)
+- **Badge**: Qty: 3 Seekh (12 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Boneless chicken thigh cubes bathed in tandoori yogurt marinade, carom seeds, and crushed spices, flame seared.
+
+#### Chicken Tikka Boti (6 Seekh)
+- **Item ID**: chicken_tikka_boti_6_seekh
+- **Price**: PKR 1,580
+- **Portion / Serving**: 6 Seekh (24 PC)
+- **Badge**: Qty: 6 Seekh (24 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Boneless chicken thigh cubes bathed in tandoori yogurt marinade, carom seeds, and crushed spices, flame seared.
+
+#### Chicken Tikka Boti (12 Seekh)
+- **Item ID**: chicken_tikka_boti_12_seekh
+- **Price**: PKR 3,100
+- **Portion / Serving**: 12 Seekh (48 PC)
+- **Badge**: Qty: 12 Seekh (48 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Boneless chicken thigh cubes bathed in tandoori yogurt marinade, carom seeds, and crushed spices, flame seared.
+
+#### Chicken Boneless Boti (1 Seekh)
+- **Item ID**: chicken_boneless_boti_1_seekh
+- **Price**: PKR 310
+- **Portion / Serving**: 1 Seekh (4 PC)
+- **Badge**: Qty: 1 Seekh (4 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Tender boneless chicken cuts marinated in lemon herb marinade, skewered over live coal fire.
+
+#### Chicken Boneless Boti (3 Seekh)
+- **Item ID**: chicken_boneless_boti_3_seekh
+- **Price**: PKR 920
+- **Portion / Serving**: 3 Seekh (12 PC)
+- **Badge**: Qty: 3 Seekh (12 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Tender boneless chicken cuts marinated in lemon herb marinade, skewered over live coal fire.
+
+#### Chicken Boneless Boti (6 Seekh)
+- **Item ID**: chicken_boneless_boti_6_seekh
+- **Price**: PKR 1,800
+- **Portion / Serving**: 6 Seekh (24 PC)
+- **Badge**: Qty: 6 Seekh (24 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Generous cuts of tender boneless chicken marinated in lemon herb marinade, skewered over live coal fire.
+
+#### Chicken Boneless Boti (12 Seekh)
+- **Item ID**: chicken_boneless_boti_12_seekh
+- **Price**: PKR 3,550
+- **Portion / Serving**: 12 Seekh (48 PC)
+- **Badge**: Qty: 12 Seekh (48 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Large family feast platter of tender boneless chicken marinated in lemon herb marinade, skewered over live coals.
+
+#### Chicken Malai Boti (1 Seekh)
+- **Item ID**: chicken_malai_boti_1_seekh
+- **Price**: PKR 360
+- **Portion / Serving**: 1 Seekh (4 PC)
+- **Badge**: Qty: 1 Seekh (4 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Velvety chicken chunks steeped in fresh malai, ground cashew nut paste, white pepper, and green cardamom.
+
+#### Chicken Malai Boti (3 Seekh)
+- **Item ID**: chicken_malai_boti_3_seekh
+- **Price**: PKR 1,060
+- **Portion / Serving**: 3 Seekh (12 PC)
+- **Badge**: Qty: 3 Seekh (12 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Velvety chicken chunks steeped in fresh malai, ground cashew nut paste, white pepper, and green cardamom.
+
+#### Chicken Malai Boti (6 Seekh)
+- **Item ID**: chicken_malai_boti_6_seekh
+- **Price**: PKR 2,099
+- **Portion / Serving**: 6 Seekh (24 PC)
+- **Badge**: Qty: 6 Seekh (24 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Velvety chicken chunks steeped in fresh malai, ground cashew nut paste, white pepper, and green cardamom for tender indulgence.
+
+#### Chicken Malai Boti (12 Seekh)
+- **Item ID**: chicken_malai_boti_12_seekh
+- **Price**: PKR 4,150
+- **Portion / Serving**: 12 Seekh (48 PC)
+- **Badge**: Qty: 12 Seekh (48 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Mega platter of velvety chicken chunks steeped in fresh malai, ground cashew nut paste, white pepper, and green cardamom.
+
+#### Chicken Green Boti (1 Seekh)
+- **Item ID**: chicken_green_boti_1_seekh
+- **Price**: PKR 360
+- **Portion / Serving**: 1 Seekh (4 PC)
+- **Badge**: Qty: 1 Seekh (4 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Spicy green haryali chicken boti infused with fresh garden mint, pungent green chilies, garlic, and fresh lime.
+
+#### Chicken Green Boti (3 Seekh)
+- **Item ID**: chicken_green_boti_3_seekh
+- **Price**: PKR 1,060
+- **Portion / Serving**: 3 Seekh (12 PC)
+- **Badge**: Qty: 3 Seekh (12 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Spicy green haryali chicken boti infused with fresh garden mint, pungent green chilies, garlic, and fresh lime.
+
+#### Chicken Green Boti (6 Seekh)
+- **Item ID**: chicken_green_boti_6_seekh
+- **Price**: PKR 2,099
+- **Portion / Serving**: 6 Seekh (24 PC)
+- **Badge**: Qty: 6 Seekh (24 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Spicy green haryali chicken boti infused with fresh garden mint, pungent green chilies, garlic, and fresh lime.
+
+#### Chicken Green Boti (12 Seekh)
+- **Item ID**: chicken_green_boti_12_seekh
+- **Price**: PKR 4,150
+- **Portion / Serving**: 12 Seekh (48 PC)
+- **Badge**: Qty: 12 Seekh (48 PC)
+- **Spice Level**: Medium Charcoal
+- **Description**: Massive platter of spicy green haryali chicken boti infused with fresh garden mint, pungent green chilies, and lime.
+
+#### Chicken Leg Piece (1 PC)
+- **Item ID**: chicken_leg_piece
+- **Price**: PKR 459
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 PC
+- **Spice Level**: Medium Charcoal
+- **Description**: Whole succulent chicken leg quarter scored deeply and basted in traditional tandoori red masala over glowing coals.
+
+#### Chicken Breast Piece (1 PC)
+- **Item ID**: chicken_breast_piece
+- **Price**: PKR 499
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 PC
+- **Spice Level**: Medium Charcoal
+- **Description**: Juicy, meaty chicken breast quarter seasoned with lemon, black pepper, and roasted chili flakes, flame broiled.
+
+#### Chicken Malai Piece (1 PC)
+- **Item ID**: chicken_malai_piece
+- **Price**: PKR 599
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 PC
+- **Spice Level**: Medium Charcoal
+- **Description**: Full prime chicken quarter marinated in rich clotted cream, saffron butter, and gentle cardamom glaze.
+
+### Category: Paratha Rolls
+
+#### Chicken Kabab Roll
+- **Item ID**: roll_chicken_kabab
+- **Price**: PKR 349
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Roll
+- **Spice Level**: Medium Charcoal
+- **Description**: Crispy pan-fried golden paratha rolled with seasoned chicken seekh kabab, crunchy onions, and mint raita.
+
+#### Chicken Malai Roll
+- **Item ID**: roll_chicken_malai
+- **Price**: PKR 499
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Roll
+- **Spice Level**: Medium Charcoal
+- **Description**: Flaky golden lachha paratha wrapped around tender chicken malai boti and garlic-herb cream sauce.
+
+#### Special Malai Roll
+- **Item ID**: roll_special_malai
+- **Price**: PKR 549
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Roll
+- **Spice Level**: Medium Charcoal
+- **Description**: Extra-loaded malai boti roll topped with melted cheese drizzle, thick cream, and secret herb mayo.
+
+#### Beef Kabab Roll
+- **Item ID**: roll_beef_kabab
+- **Price**: PKR 399
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Roll
+- **Spice Level**: Medium Charcoal
+- **Description**: Smoky beef seekh kabab rolled in hot crisp paratha with tangy imli tamarind chutney and onion rings.
+
+#### Beef Boti Roll
+- **Item ID**: roll_beef_boti
+- **Price**: PKR 599
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Roll
+- **Spice Level**: Medium Charcoal
+- **Description**: Tender char-grilled spicy beef boti cuts wrapped in crispy lachha paratha with freshly sliced salad.
+
+#### Special Beef Boti Roll
+- **Item ID**: roll_special_beef_boti
+- **Price**: PKR 799
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Roll
+- **Spice Level**: Medium Charcoal
+- **Description**: Double portion of charcoal beef boti loaded into flaky paratha with melted butter and spicy secret sauces.
+
+#### Chicken Cheese Roll
+- **Item ID**: roll_chicken_cheese
+- **Price**: PKR 499
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Roll
+- **Spice Level**: Medium Charcoal
+- **Description**: Succulent chicken boti layered with gooey melted mozzarella cheese inside golden buttery paratha.
+
+#### Shapata Roll
+- **Item ID**: roll_shapata
+- **Price**: PKR 799
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Roll
+- **Spice Level**: Medium Charcoal
+- **Description**: Signature Kaka Bhaiya Shapata roll packed with special mixed meats, charred green chilies, and fiery masala crunch.
+
+#### Wehshi Roll
+- **Item ID**: roll_wehshi
+- **Price**: PKR 999
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Roll
+- **Spice Level**: Medium Charcoal
+- **Description**: The legendary jumbo monster roll loaded with double beef boti, chicken malai, seekh kababs, and melted cheese.
+
+#### Naan Beef Kabab Roll
+- **Item ID**: roll_naan_beef_kabab
+- **Price**: PKR 290
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Roll
+- **Spice Level**: Medium Charcoal
+- **Description**: Freshly baked soft tandoori clay oven naan rolled around juicy beef seekh kabab with onion salad and mint dip.
+
+#### Naan Chicken Kabab Roll
+- **Item ID**: roll_naan_chicken_kabab
+- **Price**: PKR 295
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Roll
+- **Spice Level**: Medium Charcoal
+- **Description**: Soft clay tandoor naan wrapping freshly grilled chicken seekh kabab with cooling coriander yogurt raita.
+
+### Category: Fish (Seasonal)
+
+#### Grill Fish (Half KG)
+- **Item ID**: fish_grill_half_kg
+- **Price**: PKR 850
+- **Portion / Serving**: Half KG (0.5 KG)
+- **Badge**: Qty: Half KG
+- **Spice Level**: Medium Charcoal
+- **Description**: Fresh seasonal river fish marinated in roasted ajwain, sea salt, lemon, and stone-ground masalas, grilled over live coals.
+
+#### Grill Fish (1 KG)
+- **Item ID**: fish_grill_1_kg
+- **Price**: PKR 1,580
+- **Portion / Serving**: 1 KG
+- **Badge**: Qty: 1 KG
+- **Spice Level**: Medium Charcoal
+- **Description**: Fresh seasonal river fish marinated in roasted ajwain, sea salt, lemon, and stone-ground masalas, grilled over live coals.
+
+#### Grill Fish (1.5 KG)
+- **Item ID**: fish_grill_1_5_kg
+- **Price**: PKR 2,370
+- **Portion / Serving**: 1.5 KG
+- **Badge**: Qty: 1.5 KG
+- **Spice Level**: Medium Charcoal
+- **Description**: Fresh seasonal river fish marinated in roasted ajwain, sea salt, lemon, and stone-ground masalas, grilled over live coals.
+
+#### Fried Fish
+- **Item ID**: fish_fried
+- **Price**: Coming Soon (Seasonal Special)
+- **Portion / Serving**: Coming Soon
+- **Badge**: Coming Soon
+- **Spice Level**: Medium Charcoal
+- **Description**: Crispy Lahori batter-fried river fish with aromatic carom and coriander crust. Coming soon this winter season!
+
+### Category: Sides Items & Drinks
+
+#### Sada Roti
+- **Item ID**: side_sada_roti
+- **Price**: PKR 30
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 PC
+- **Spice Level**: Authentic Taste
+- **Description**: Traditional thin whole wheat roti baked fresh on clay tandoor walls.
+
+#### Sada Naan
+- **Item ID**: side_sada_naan
+- **Price**: PKR 40
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 PC
+- **Spice Level**: Authentic Taste
+- **Description**: Fluffy hot clay oven tandoori naan with blistered golden crust and soft crumb.
+
+#### Malwari Paratha
+- **Item ID**: side_malwari_paratha
+- **Price**: PKR 150
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 PC
+- **Spice Level**: Authentic Taste
+- **Description**: Crispy, multi-layered golden Malwari lachha paratha pan-fried in authentic desi ghee.
+
+#### Raita & Imli
+- **Item ID**: side_raita_imli
+- **Price**: PKR 120
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Serving
+- **Spice Level**: Authentic Taste
+- **Description**: Chilled zeera mint curd raita served alongside our signature sweet-and-sour tamarind imli chutney.
+
+#### Fresh Salad
+- **Item ID**: side_fresh_salad
+- **Price**: PKR 150
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Platter
+- **Spice Level**: Authentic Taste
+- **Description**: Fresh crisp red onion rings, cucumber slices, juicy tomatoes, green chilies, and lemon wedges.
+
+#### Regular Bottle
+- **Item ID**: drink_regular_bottle
+- **Price**: PKR 120
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 250 ml
+- **Spice Level**: Authentic Taste
+- **Description**: Ice-cold 250ml glass bottle soda: Pepsi, 7Up, Mirinda, or Coke.
+
+#### Bottle (500 ml)
+- **Item ID**: drink_bottle_500ml
+- **Price**: PKR 200
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 500 ml
+- **Spice Level**: Authentic Taste
+- **Description**: Chilled 500ml soft drink bottle for personal dining refreshment.
+
+#### Bottle (1.5 L)
+- **Item ID**: drink_bottle_1500ml
+- **Price**: PKR 350
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1.5 L
+- **Spice Level**: Authentic Taste
+- **Description**: Large 1.5 Litre cold drink bottle ideal for family feasts and group dining.
+
+#### Lemon Soda
+- **Item ID**: drink_lemon_soda
+- **Price**: PKR 200
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1 Glass
+- **Spice Level**: Authentic Taste
+- **Description**: Zesty freshly squeezed lemon juice in fizzy soda with roasted cumin black salt and crushed mint.
+
+#### Mineral Water (500 ml)
+- **Item ID**: drink_mineral_water_500ml
+- **Price**: PKR 120
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 500 ml
+- **Spice Level**: Authentic Taste
+- **Description**: Chilled, sealed 500ml bottle of pure premium mineral drinking water.
+
+#### Mineral Water (1.5 L)
+- **Item ID**: drink_mineral_water_1500ml
+- **Price**: PKR 200
+- **Portion / Serving**: Serves 1-2 Persons
+- **Badge**: Qty: 1.5 L
+- **Spice Level**: Authentic Taste
+- **Description**: Full 1.5 Litre sealed family bottle of pure premium mineral water.
+
+---
+
+## Frequently Asked Questions (AEO Knowledge Base)
+
+### 1. Where is Kaka Bhaiya BBQ located in Lahore?
+Kaka Bhaiya BBQ is located at 414-E, Hoo Chowk, Johar Town, Lahore, Punjab 54770, Pakistan. We are centrally situated near the Model Town Link Road intersection and Khokhar Chowk.
+
+### 2. Who is the owner and founder of Kaka Bhaiya BBQ?
+Kaka Bhaiya BBQ is an enterprise of Kaka's Life, founded and led by CEO Hafiz Muhammad Mubeen, with patriarch and head pitmaster Sufi Muhammad Ali (50+ years culinary experience), and owner Muhammad Afzal.
+
+### 3. What is the history of "Model Town D-Block Walay"?
+Our ancestral charcoal pits originated in 1970 at Model Town D-Block, Lahore. To honor our genuine 56-year barbecue lineage, we proudly retain the identity of "Model Town D-Block Walay".
+
+### 4. What are the operating hours of Kaka Bhaiya BBQ?
+We are open daily from 5:00 PM in the evening until 3:00 AM late at night, 7 days a week, offering live dine-in, takeaway, and direct WhatsApp delivery.
+
+### 5. What are the signature dishes at Kaka Bhaiya BBQ?
+Our top signature dishes include the legendary Bhaiya Special Beef Kabab (1 Bite), succulent Beef Boti, Chicken Malai Boti, Chicken Kasturi Boti, Chicken Quarter Tikka (Leg/Breast), and crispy layered Paratha Rolls.
+
+### 6. How can I order online or book a table?
+Orders can be placed directly via WhatsApp at +92 322 8019941, through our website at https://kakabhaiyabbq.com/order.html, through Foodpanda, or at our 12 interactive table ordering stations at https://kakabhaiyabbq.com/tables.html.
+
+### 7. What areas do you deliver to in Lahore?
+We provide express delivery strictly within a 10 km radius of our restaurant across Johar Town, Model Town, Faisal Town, Garden Town, Gulberg, Township, Wapda Town (Strictly within 10 km radius of 414-E Hoo Chowk, Johar Town), Canal View, Valencia Town, and surrounding sectors.
+
+### 8. Is all meat at Kaka Bhaiya BBQ 100% Halal?
+Yes. 100% of our beef, mutton, and poultry is certified fresh Halal, butchered daily under rigorous hygienic supervision and roasted over natural chemical-free acacia charcoal.

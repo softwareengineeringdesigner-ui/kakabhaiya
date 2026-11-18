@@ -1,0 +1,47 @@
+# ==============================================================================
+# Kaka Bhaiya BBQ (Model Town D-Block Walay) - robots.txt
+# Strict Crawling & AI Engine Optimization (GEO / AEO) Directives
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+Disallow: /tables/table-*.html
+Disallow: /tables/index.html
+
+# ------------------------------------------------------------------------------
+# Explicitly Authorized AI Search Engines, Generative Agents & Answer Engines
+# ------------------------------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Canonical Sitemap Reference
+Sitemap: https://kakabhaiyabbq.com/sitemap.xml
