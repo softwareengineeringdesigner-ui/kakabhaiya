@@ -26,7 +26,7 @@
       ]
     },
     {
-      "source": "/sitemap.txt",
+      "source": "/(robots|sitemap)\\.txt",
       "headers": [
         {
           "key": "Content-Type",
