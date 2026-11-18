@@ -44,4 +44,4 @@ User-agent: CCBot
 Allow: /
 
 # Canonical Sitemap Reference
-Sitemap: https://kakabhaiyabbq.com/sitemap.xml
+Sitemap: https://kakabhaiya.vercel.app/sitemap.xml

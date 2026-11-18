@@ -31,8 +31,8 @@
     company: "Kaka's Life Enterprise",
 
     // Canonical & Domain URLs
-    siteUrl: "https://kakabhaiyabbq.com",
-    vercelUrl: "https://kaka-bhaiya-bbq.vercel.app",
+    siteUrl: "https://kakabhaiya.vercel.app",
+    vercelUrl: "https://kakabhaiya.vercel.app",
 
     // Contact Information (Strictly WhatsApp & Direct Call - Zero Email per policy)
     phone: "+92 322 8019941",
