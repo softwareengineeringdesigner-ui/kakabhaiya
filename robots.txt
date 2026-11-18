@@ -45,3 +45,4 @@ Allow: /
 
 # Canonical Sitemap Reference
 Sitemap: https://kakabhaiya.vercel.app/sitemap.xml
+Sitemap: https://kakabhaiya.vercel.app/sitemap.txt
