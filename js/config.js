@@ -87,9 +87,9 @@
 
     // Official Digital Profiles & Delivery Partners
     socialLinks: {
-      facebook: "https://www.facebook.com/kakabhaiyabbq",
-      instagram: "https://www.instagram.com/kakabhaiyabbq",
-      tiktok: "https://www.tiktok.com/@kakabhaiyabbq",
+      facebook: "https://www.facebook.com/share/1KzApvDWn2/?mibextid=wwXIfr",
+      instagram: "https://www.instagram.com/kakabhaiyaresturantb.q/",
+      tiktok: "https://www.tiktok.com/@kakabhaiyarestuarant",
       foodpanda: "https://www.foodpanda.pk/restaurant/r2pi/kaka-bhaiya-bar-b-q?srsltid=AYCX9vJ8TWc0L8LYB6IXUQjSeIZvWvsswnzelODpGlIIwmMnIBYlUg5S",
       googleMaps: "https://maps.google.com/?q=Hoo+Chowk,+Johar+Town,+Lahore"
     },

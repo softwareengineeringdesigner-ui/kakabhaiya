@@ -13,15 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // ------------------------------------------------------------------------
   const preloader = document.getElementById('preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        preloader.classList.add('loaded');
-      }, 350);
-    });
-    // Fallback if load already fired
-    setTimeout(() => {
+    const dismissPreloader = () => {
       preloader.classList.add('loaded');
-    }, 1500);
+      setTimeout(() => {
+        if (preloader.parentNode) preloader.remove();
+      }, 500);
+    };
+    if (document.readyState === 'complete') {
+      dismissPreloader();
+    } else {
+      window.addEventListener('load', dismissPreloader, { once: true });
+      // Fast fallback to guarantee site is visible within 500ms
+      setTimeout(dismissPreloader, 500);
+    }
   }
 
   // ------------------------------------------------------------------------
@@ -144,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
       price: 150,
       category: 'Sides Items & Drinks',
       desc: 'Crisp onion rings, sliced cucumbers & lemon platter',
-      image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
+      image: 'images/dishes/fresh_salad.webp',
       badge: 'Farm Fresh'
     },
     {
@@ -232,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
         name: product.name,
         portion: product.portion || '',
         price: Number(product.price) || 0,
-        image: product.image || 'https://images.unsplash.com/photo-1544025162-d76694265947?w=300&q=80',
+        image: product.image || 'images/hero/smokehouse_hero.webp',
         category: product.category || 'BBQ Special',
         quantity: 1
       });
@@ -374,8 +378,8 @@ document.addEventListener('DOMContentLoaded', () => {
           { id: 'side_sada_naan', name: 'Sada Naan', price: 40, image: 'images/dishes/sada_naan.jpg' },
           { id: 'side_sada_roti', name: 'Sada Roti', price: 30, image: 'images/dishes/sada_roti.jpg' },
           { id: 'side_malwari_paratha', name: 'Malwari Paratha', price: 150, image: 'images/dishes/malwari_paratha.jpg' },
-          { id: 'side_bottle_250', name: 'Cold Drink (250ml)', price: 120, image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=300&q=80' },
-          { id: 'side_raita_imli', name: 'Raita & Imli', price: 120, image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=300&q=80' }
+          { id: 'side_bottle_250', name: 'Cold Drink (250ml)', price: 120, image: 'images/dishes/cold_drink_250ml.webp' },
+          { id: 'side_raita_imli', name: 'Raita & Imli', price: 120, image: 'images/dishes/raita_sauce.webp' }
         ];
 
         html += `
@@ -708,7 +712,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const baseName = addBtn.dataset.name || 'Signature BBQ Dish';
       const portion = addBtn.dataset.portion || '';
       const basePrice = Number(addBtn.dataset.basePrice) || Number(addBtn.dataset.price) || 1200;
-      const image = addBtn.dataset.image || 'https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80';
+      const image = addBtn.dataset.image || 'images/hero/smokehouse_hero.webp';
       const category = addBtn.dataset.category || 'BBQ';
 
       // Ensure portion is clearly indicated in the item title
@@ -739,7 +743,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: side.id,
                 name: side.name,
                 price: Number(side.price),
-                image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&q=80',
+                image: 'images/dishes/crispy_paratha.webp',
                 category: 'Sides & Accompaniments'
               });
             });
@@ -782,8 +786,8 @@ document.addEventListener('DOMContentLoaded', () => {
       rail: [
         { id: 'side_naan', name: 'Sada Naan', price: 40, desc: 'Hot clay oven tandoori naan', image: 'images/dishes/sada_naan.jpg' },
         { id: 'side_raita', name: 'Raita & Imli', price: 120, desc: 'Chilled mint zeera raita and tangy imli chutney', image: 'images/dishes/raita_imli_sauce.jpg' },
-        { id: 'side_salad', name: 'Fresh Salad', price: 150, desc: 'Crisp onion rings and cucumber platter', image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&q=80' },
-        { id: 'side_soda', name: 'Lemon Soda', price: 200, desc: 'Zesty freshly squeezed lemon soda with mint', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&q=80' }
+        { id: 'side_salad', name: 'Fresh Salad', price: 150, desc: 'Crisp onion rings and cucumber platter', image: 'images/dishes/fresh_salad.webp' },
+        { id: 'side_soda', name: 'Lemon Soda', price: 200, desc: 'Zesty freshly squeezed lemon soda with mint', image: 'images/dishes/lemon_soda.webp' }
       ]
     },
     {
@@ -812,8 +816,8 @@ document.addEventListener('DOMContentLoaded', () => {
       rail: [
         { id: 'side_naan', name: 'Sada Naan', price: 40, desc: 'Fresh hot clay oven tandoori naan', image: 'images/dishes/sada_naan.jpg' },
         { id: 'side_raita', name: 'Raita & Imli', price: 120, desc: 'Chilled mint zeera raita and tangy imli chutney', image: 'images/dishes/raita_imli_sauce.jpg' },
-        { id: 'side_salad', name: 'Fresh Salad', price: 150, desc: 'Crisp onion rings and cucumber platter', image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&q=80' },
-        { id: 'side_soda', name: 'Lemon Soda', price: 200, desc: 'Zesty freshly squeezed lemon soda with mint', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&q=80' }
+        { id: 'side_salad', name: 'Fresh Salad', price: 150, desc: 'Crisp onion rings and cucumber platter', image: 'images/dishes/fresh_salad.webp' },
+        { id: 'side_soda', name: 'Lemon Soda', price: 200, desc: 'Zesty freshly squeezed lemon soda with mint', image: 'images/dishes/lemon_soda.webp' }
       ]
     },
     {
@@ -821,7 +825,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Chicken Tikka Boti (12 PC)',
       desc: 'Twelve juicy chicken breast cuts marinated in sour lemon, crushed coriander seeds, and red chili flakes, roasted to perfection on skewers.',
       price: 799,
-      image: 'https://images.unsplash.com/photo-1755090154782-5215189b4083?w=600&q=80',
+      image: 'images/dishes/chicken_tikka_boti.webp',
       category: 'Chicken B.B.Q',
       spice: 'Medium Charcoal',
       rail: [
@@ -836,13 +840,13 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Special Malai Roll',
       desc: 'Jumbo flaky paratha loaded with creamy chicken malai boti, melted garlic cheese drizzle, and house special herb chutney.',
       price: 549,
-      image: 'https://images.unsplash.com/photo-1762284513008-08f897ff5041?w=600&q=80',
+      image: 'images/dishes/special_malai_roll.webp',
       category: 'Paratha Rolls',
       spice: 'Mild & Creamy',
       rail: [
         { id: 'side_raita', name: 'Raita & Imli', price: 120, desc: 'Chilled mint zeera raita and tangy imli chutney', image: 'images/dishes/raita_imli_sauce.jpg' },
-        { id: 'side_soda', name: 'Lemon Soda', price: 200, desc: 'Zesty lemon soda with black salt and mint', image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&q=80' },
-        { id: 'side_salad', name: 'Fresh Salad', price: 150, desc: 'Crisp vegetable platter', image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&q=80' },
+        { id: 'side_soda', name: 'Lemon Soda', price: 200, desc: 'Zesty lemon soda with black salt and mint', image: 'images/dishes/lemon_soda.webp' },
+        { id: 'side_salad', name: 'Fresh Salad', price: 150, desc: 'Crisp vegetable platter', image: 'images/dishes/fresh_salad.webp' },
         { id: 'side_bottle_500', name: 'Bottle (500 ml)', price: 200, desc: 'Chilled 500ml cold drink', image: 'images/dishes/bottle_500ml.png' }
       ]
     },
@@ -851,13 +855,13 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Grill Fish',
       desc: 'Seasonal river fish marinated in roasted ajwain, lemon juice, turmeric, and garlic, slow-grilled over acacia charcoal.',
       price: 1580,
-      image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=80',
+      image: 'images/dishes/charcoal_fish_grill.webp',
       category: 'Fish (Seasonal)',
       spice: 'Medium Charcoal',
       rail: [
         { id: 'side_naan', name: 'Sada Naan', price: 40, desc: 'Fresh tandoori naan', image: 'images/dishes/sada_naan.jpg' },
         { id: 'side_raita', name: 'Raita & Imli', price: 120, desc: 'Zesty tamarind imli sauce', image: 'images/dishes/raita_imli_sauce.jpg' },
-        { id: 'side_salad', name: 'Fresh Salad', price: 150, desc: 'Sliced onion rings with fresh lemon', image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&q=80' },
+        { id: 'side_salad', name: 'Fresh Salad', price: 150, desc: 'Sliced onion rings with fresh lemon', image: 'images/dishes/fresh_salad.webp' },
         { id: 'side_bottle_1500', name: 'Bottle (1.5 L)', price: 350, desc: 'Large 1.5L cold drink', image: 'images/dishes/bottle_1500ml.png' }
       ]
     }
@@ -1973,7 +1977,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "1 PERSON DEAL (Chicken)",
         "category": "Exclusive Deals",
         "price": 899,
-        "image": "https://images.unsplash.com/photo-1775211578178-61f06027adf3?w=600&q=80",
+        "image": "images/dishes/deal_1_person_chicken.webp",
         "lookBadge": "Solo Special",
         "spiceBadge": "Authentic Taste",
         "score": 4.9,
@@ -1988,28 +1992,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2043,7 +2047,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "1 PERSON DEAL (Beef)",
         "category": "Exclusive Deals",
         "price": 1249,
-        "image": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=600&q=80",
+        "image": "images/dishes/deal_1_person_beef.webp",
         "lookBadge": "Prime Beef Solo",
         "spiceBadge": "Authentic Taste",
         "score": 4.9,
@@ -2058,28 +2062,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2113,7 +2117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "2 PERSON DEAL",
         "category": "Exclusive Deals",
         "price": 699,
-        "image": "https://images.unsplash.com/photo-1628294895950-9805252327bc?w=600&q=80",
+        "image": "images/dishes/deal_2_person.webp",
         "lookBadge": "Duo Roll Combo",
         "spiceBadge": "Authentic Taste",
         "score": 4.9,
@@ -2128,28 +2132,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2183,7 +2187,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "4 PERSON DEAL",
         "category": "Exclusive Deals",
         "price": 2599,
-        "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=600&q=80",
+        "image": "images/dishes/deal_4_person.webp",
         "lookBadge": "Friends Feast",
         "spiceBadge": "Authentic Taste",
         "score": 4.9,
@@ -2198,28 +2202,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2253,7 +2257,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "SHAPATA DEAL",
         "category": "Exclusive Deals",
         "price": 2299,
-        "image": "https://images.unsplash.com/photo-1567932783552-e305bbf70b63?w=600&q=80",
+        "image": "images/dishes/deal_shapata.webp",
         "lookBadge": "Traditional Special",
         "spiceBadge": "Authentic Taste",
         "score": 4.9,
@@ -2268,28 +2272,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2323,7 +2327,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "SPECIAL DEAL",
         "category": "Exclusive Deals",
         "price": 1099,
-        "image": "https://images.unsplash.com/photo-1781332150932-e4af32932ee9?w=600&q=80",
+        "image": "images/dishes/deal_special.webp",
         "lookBadge": "Customer Favorite",
         "spiceBadge": "Authentic Taste",
         "score": 4.9,
@@ -2338,28 +2342,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2393,7 +2397,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "FAMILY DEAL 1 (The Feast)",
         "category": "Exclusive Deals",
         "price": 5999,
-        "image": "https://images.unsplash.com/photo-1771285119318-b342c3ecc51c?w=800&q=80",
+        "image": "images/dishes/deal_family_grand.webp",
         "lookBadge": "Mega Family Feast",
         "spiceBadge": "Authentic Taste",
         "score": 4.9,
@@ -2408,28 +2412,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2463,7 +2467,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "FAMILY DEAL 2 (The Grand Feast)",
         "category": "Exclusive Deals",
         "price": 7999,
-        "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80",
+        "image": "images/hero/smokehouse_hero.webp",
         "lookBadge": "TOP DEAL (Rs 7,999)",
         "spiceBadge": "Authentic Taste",
         "score": 4.9,
@@ -2478,28 +2482,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2548,28 +2552,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2623,28 +2627,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2698,28 +2702,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2773,28 +2777,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2848,28 +2852,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2923,28 +2927,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -2998,28 +3002,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -3058,7 +3062,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Chicken Tikka Boti (12 PC)",
         "category": "Chicken B.B.Q",
         "price": 799,
-        "image": "https://images.unsplash.com/photo-1755090154782-5215189b4083?w=600&q=80",
+        "image": "images/dishes/chicken_tikka_boti.webp",
         "lookBadge": "Qty: 12 PC",
         "spiceBadge": "Medium Charcoal",
         "score": 4.9,
@@ -3073,28 +3077,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -3148,28 +3152,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -3223,28 +3227,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -3298,28 +3302,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -3373,28 +3377,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -3433,7 +3437,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Chicken Breast Piece (1 PC)",
         "category": "Chicken B.B.Q",
         "price": 499,
-        "image": "https://images.unsplash.com/photo-1670398564097-0762e1b30b3a?w=600&q=80",
+        "image": "images/dishes/chicken_breast_piece.webp",
         "lookBadge": "Qty: 1 PC",
         "spiceBadge": "Medium Charcoal",
         "score": 4.9,
@@ -3448,28 +3452,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -3523,28 +3527,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -3583,7 +3587,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Chicken Kabab Roll",
         "category": "Paratha Rolls",
         "price": 349,
-        "image": "https://images.unsplash.com/photo-1745126009946-1b35b1a16fec?w=600&q=80",
+        "image": "images/dishes/chicken_kabab_roll.webp",
         "lookBadge": "Qty: 1 Roll",
         "spiceBadge": "Medium Charcoal",
         "score": 4.9,
@@ -3598,28 +3602,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -3653,7 +3657,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Chicken Malai Roll",
         "category": "Paratha Rolls",
         "price": 499,
-        "image": "https://images.unsplash.com/photo-1748955308143-5055af50bba6?w=600&q=80",
+        "image": "images/dishes/chicken_malai_roll.webp",
         "lookBadge": "Qty: 1 Roll",
         "spiceBadge": "Medium Charcoal",
         "score": 4.9,
@@ -3668,28 +3672,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -3723,7 +3727,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Special Malai Roll",
         "category": "Paratha Rolls",
         "price": 549,
-        "image": "https://images.unsplash.com/photo-1762284513008-08f897ff5041?w=600&q=80",
+        "image": "images/dishes/special_malai_roll.webp",
         "lookBadge": "Qty: 1 Roll",
         "spiceBadge": "Medium Charcoal",
         "score": 4.9,
@@ -3738,28 +3742,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -3793,7 +3797,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Beef Kabab Roll",
         "category": "Paratha Rolls",
         "price": 399,
-        "image": "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=600&q=80",
+        "image": "images/dishes/beef_kabab_roll.webp",
         "lookBadge": "Qty: 1 Roll",
         "spiceBadge": "Medium Charcoal",
         "score": 4.9,
@@ -3808,28 +3812,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -3863,7 +3867,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Beef Boti Roll",
         "category": "Paratha Rolls",
         "price": 599,
-        "image": "https://images.unsplash.com/photo-1778168199427-4e839943d20f?w=600&q=80",
+        "image": "images/dishes/beef_boti_roll.webp",
         "lookBadge": "Qty: 1 Roll",
         "spiceBadge": "Medium Charcoal",
         "score": 4.9,
@@ -3878,28 +3882,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -3933,7 +3937,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Special Beef Boti Roll",
         "category": "Paratha Rolls",
         "price": 799,
-        "image": "https://images.unsplash.com/photo-1561760041-ca62af0d9047?w=600&q=80",
+        "image": "images/dishes/special_beef_boti_roll.webp",
         "lookBadge": "Qty: 1 Roll",
         "spiceBadge": "Medium Charcoal",
         "score": 4.9,
@@ -3948,28 +3952,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4003,7 +4007,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Chicken Cheese Roll",
         "category": "Paratha Rolls",
         "price": 499,
-        "image": "https://images.unsplash.com/photo-1740377015738-b0f49643d468?w=600&q=80",
+        "image": "images/dishes/chicken_cheese_roll.webp",
         "lookBadge": "Qty: 1 Roll",
         "spiceBadge": "Medium Charcoal",
         "score": 4.9,
@@ -4018,28 +4022,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4088,28 +4092,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4143,7 +4147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Wehshi Roll",
         "category": "Paratha Rolls",
         "price": 999,
-        "image": "https://plus.unsplash.com/premium_photo-1731512475641-191f7841512e?w=600&q=80",
+        "image": "images/dishes/wehshi_roll.webp",
         "lookBadge": "Qty: 1 Roll",
         "spiceBadge": "Medium Charcoal",
         "score": 4.9,
@@ -4158,28 +4162,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4228,28 +4232,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4298,28 +4302,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4353,7 +4357,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Grill Fish",
         "category": "Fish (Seasonal)",
         "price": 1580,
-        "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80",
+        "image": "images/dishes/charcoal_fish_grill.webp",
         "lookBadge": "Qty: Seasonal Special",
         "spiceBadge": "Medium Charcoal",
         "score": 4.9,
@@ -4368,28 +4372,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4443,28 +4447,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Crispy Lahori batter-fried river fish with aromatic carom and coriander crust. Coming soon this winter season!",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Crispy Lahori batter-fried river fish with aromatic carom and coriander crust. Coming soon this winter season!",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crispy Lahori batter-fried river fish with aromatic carom and coriander crust. Coming soon this winter season!",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Crispy Lahori batter-fried river fish with aromatic carom and coriander crust. Coming soon this winter season!",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4518,28 +4522,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4598,28 +4602,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4678,28 +4682,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4753,28 +4757,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4813,7 +4817,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Fresh Salad",
         "category": "Sides Items & Drinks",
         "price": 150,
-        "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80",
+        "image": "images/dishes/fresh_salad.webp",
         "lookBadge": "Qty: 1 Platter",
         "spiceBadge": "Authentic Taste",
         "score": 4.9,
@@ -4828,28 +4832,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4903,28 +4907,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -4983,28 +4987,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -5058,28 +5062,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -5113,7 +5117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Lemon Soda",
         "category": "Sides Items & Drinks",
         "price": 200,
-        "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&q=80",
+        "image": "images/dishes/lemon_soda.webp",
         "lookBadge": "Qty: 1 Glass",
         "spiceBadge": "Authentic Taste",
         "score": 4.9,
@@ -5128,28 +5132,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -5188,7 +5192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Mineral Water (500 ml)",
         "category": "Sides Items & Drinks",
         "price": 120,
-        "image": "https://images.unsplash.com/photo-1523362628745-0c100150b504?w=600&q=80",
+        "image": "images/dishes/mineral_water.webp",
         "lookBadge": "Qty: 500 ml",
         "spiceBadge": "Authentic Taste",
         "score": 4.9,
@@ -5203,28 +5207,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -5263,7 +5267,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "title": "Mineral Water (1.5 L)",
         "category": "Sides Items & Drinks",
         "price": 200,
-        "image": "https://plus.unsplash.com/premium_photo-1681284939219-acfc2faa7eb8?w=600&q=80",
+        "image": "images/dishes/beverage_large.webp",
         "lookBadge": "Qty: 1.5 L",
         "spiceBadge": "Authentic Taste",
         "score": 4.9,
@@ -5278,28 +5282,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 "name": "Sada Naan",
                 "price": 40,
                 "desc": "Fresh hot clay oven tandoori naan",
-                "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80"
+                "image": "images/dishes/crispy_paratha.webp"
             },
             {
                 "id": "side_raita_imli",
                 "name": "Raita & Imli",
                 "price": 120,
                 "desc": "Chilled mint zeera raita and tangy imli chutney",
-                "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80"
+                "image": "images/dishes/raita_sauce.webp"
             },
             {
                 "id": "side_fresh_salad",
                 "name": "Fresh Salad",
                 "price": 150,
                 "desc": "Crisp sliced salad platter",
-                "image": "https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80"
+                "image": "images/dishes/fresh_salad.webp"
             },
             {
                 "id": "drink_bottle_500ml",
                 "name": "Bottle (500 ml)",
                 "price": 200,
                 "desc": "Chilled cold drink",
-                "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80"
+                "image": "images/dishes/deal_family_bbq.webp"
             }
         ],
         "reviews": [
@@ -5652,7 +5656,7 @@ document.addEventListener('DOMContentLoaded', () => {
               id: side.id,
               name: side.name,
               price: side.price,
-              image: side.image || 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&q=80',
+              image: side.image || 'images/dishes/crispy_paratha.webp',
               category: 'Sides & Accompaniments',
               quantity: 1
             });
