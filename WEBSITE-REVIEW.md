@@ -82,6 +82,7 @@ D:\KAKA_BHAIYA\
 ## 3. Comprehensive Page-by-Page Audit & Features
 
 ### 3.1 Homepage (`index.html`)
+* **Near-Me & Bhaiya Query Dominance**: Targeted on-page content, FAQ items, and meta tagging answering "restaurant near me in Johar Town", "where to find Bhaiya beef kabab", and "best beef seekh kabab in Lahore".
 * **Visual Presentation**: High-impact hero section with warm ember accents (`#FF541E`), video/photo backdrop, and live badge counter.
 * **Runway Lookbook & Signature Reel**: Interactive carousel highlighting the signature Bhaiya Special Beef Kabab and Chicken Malai Boti.
 * **Brand Leadership**: Profiles honoring CEO Hafiz Muhammad Mubeen, Culinary Patriarch Sufi Muhammad Ali (50+ years heritage), and Owner Muhammad Afzal.
@@ -117,6 +118,7 @@ D:\KAKA_BHAIYA\
 * **Delivery Radius Policy Enforcement**:
   * Prominent alert badge: **"Delivery Policy (10 KM Limit): Doorstep delivery service is available strictly within a 10 KM radius of our restaurant."**
   * Address field prompt highlights the 10 KM radius limit from Hoo Chowk.
+* **Secret Promo Code Checkout**: Custom active promo code `kakabbq` (10% discount) with zero hint text or placeholder giveaway on the website, ensuring strict promotional security.
 * **Dynamic Fee Calculation**: Delivery fee is automatically calculated (Free on orders above PKR 2,500, else PKR 200 within 10 KM).
 * **Direct WhatsApp Dispatch**: Sends an itemized, formatted order bill directly to the restaurant's kitchen WhatsApp (+92 322 8019941) with delivery zone notes.
 

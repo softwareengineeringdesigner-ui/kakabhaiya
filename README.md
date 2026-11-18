@@ -29,7 +29,7 @@ d:/KAKA_BHAIYA/
 ├── product.html         # Dedicated product showcase page (HD imagery, specs, pricing, pairings, & live customer review submission system)
 ├── reviews.html         # Verified diner ratings, breakdown bars, interactive review form
 ├── reservation.html     # Table booking system (Johar Town Hoo Chowk) with instant modal
-├── order.html           # Cart checkout, promo codes (KAKA10, BBQFEAST), & WhatsApp order generator (03228019941)
+├── order.html           # Cart checkout, promo code checkout, & WhatsApp order generator (03228019941)
 ├── 404.html             # Custom 404 error page with BBQ theme
 ├── css/
 │   └── style.css        # Master stylesheet (Light theme, ultra high-contrast dark footer, 3D engine, 2026 aesthetics)

@@ -156,7 +156,28 @@
       "PCSIR Society",
       "PIA Society",
       "Lahore"
-    ]
+    ],
+    // Search & Generative Query Keywords (SEO / AEO / GEO)
+    searchKeywords: [
+      "restaurant near me",
+      "best restaurant near me",
+      "bbq near me",
+      "kabab near me",
+      "bhaiya",
+      "bhaiya bbq",
+      "bhaiya kabab",
+      "bhaiya beef kabab",
+      "beef kabab",
+      "best beef kabab in lahore",
+      "beef boti",
+      "chicken malai boti",
+      "chicken kasturi boti",
+      "quarter chicken tikka",
+      "paratha rolls near me",
+      "late night restaurant near me",
+      "johar town restaurant near me",
+      "model town d block walay"
+    ],
   };
 
   // Attach to window object for global client script accessibility

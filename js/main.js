@@ -607,11 +607,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check applied coupon discount
     const discountCode = window.appliedPromoCode || null;
     let discount = 0;
-    if (discountCode === 'KAKA10') {
-      discount = Math.round(subtotal * 0.10);
-    } else if (discountCode === 'BBQFEAST') {
-      discount = Math.min(300, subtotal);
-    }
+      if (discountCode === 'KAKABBQ') {
+        discount = Math.round(subtotal * 0.10);
+      }
+
+
 
     const grandTotal = Math.max(0, subtotal - discount + deliveryFee);
 
@@ -1705,16 +1705,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const codeInput = document.getElementById('coupon-input');
       const code = (codeInput?.value || '').trim().toUpperCase();
 
-      if (code === 'KAKA10') {
-        window.appliedPromoCode = 'KAKA10';
-        window.showToast('Coupon applied! 10% discount granted.', 'bi-tag-fill');
-      } else if (code === 'BBQFEAST') {
-        window.appliedPromoCode = 'BBQFEAST';
-        window.showToast('Coupon applied! PKR 300 discount granted.', 'bi-tag-fill');
+      if (code === 'KAKABBQ') {
+        window.appliedPromoCode = 'KAKABBQ';
+        window.showToast('Promo code applied successfully! 10% discount added.', 'bi-check-circle-fill');
       } else {
-        window.showToast('Invalid coupon code. Try KAKA10 or BBQFEAST', 'bi-x-circle-fill', true);
-        window.appliedPromoCode = null;
+        window.showToast('Invalid promo code. Please enter a valid code.', 'bi-x-circle-fill', true);
+        return;
       }
+
+
+
       renderOrderPageCart();
     });
   }
@@ -1820,8 +1820,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const deliveryFee = !isDelivery ? 0 : (subtotal >= 2500 ? 0 : 200);
       let discount = 0;
-      if (window.appliedPromoCode === 'KAKA10') discount = Math.round(subtotal * 0.1);
-      if (window.appliedPromoCode === 'BBQFEAST') discount = Math.min(300, subtotal);
+      if (window.appliedPromoCode === 'KAKABBQ') discount = Math.round(subtotal * 0.10);
 
       const total = Math.max(0, subtotal - discount + deliveryFee);
 
